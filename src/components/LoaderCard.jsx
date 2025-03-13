@@ -18,8 +18,8 @@ const LoaderCard = () => {
         justifyContent: "center",
         backgroundColor: "#fff", // Dark background for contrast
         borderLeft: "4px solid #0f0", // Thin green label
-        width: "180px",
-        height: "110px",
+        width: "290px",
+        height: "150px",
         borderRadius: "8px",
         animation: `${flipAnimation} 1s infinite linear`, // Continuous flipping
         transformStyle: "preserve-3d",

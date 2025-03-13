@@ -10,14 +10,14 @@ const Round1 = () => {
 
   useEffect(() => {
     // Get all Beginner Stage participants
-    const beginnerParticipants = roundsData.rounds["Beginner Stage"];
+    const beginnerParticipants = roundsData.rounds["Qualifier Round"];
 
     // Shuffle participants randomly
     const shuffled = [...beginnerParticipants].sort(() => Math.random() - 0.5);
 
     // Create 24 random pairs (48 participants needed, ensuring even pairing)
     const matchPairs = [];
-    for (let i = 0; i < 48; i += 2) {
+    for (let i = 0; i < 32; i += 2) {
       matchPairs.push({
         number: i / 2 + 1,
         opponent1: shuffled[i],
@@ -56,7 +56,7 @@ const Round1 = () => {
 
       <Box display="flex" flexWrap="wrap" gap={2} justifyContent="center">
         {loading
-          ? Array(24)
+          ? Array(16)
               .fill(0)
               .map((_, index) => <LoaderCard key={index} />) // Show LoaderCards
           : pairs.map((pair) => (

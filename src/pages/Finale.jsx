@@ -16,7 +16,7 @@ const ParticipantCard = styled(Paper)(({ borderColor }) => ({
   borderRadius: "8px",
   boxShadow: "0px 4px 8px rgba(255, 255, 255, 0.2)", // Soft white glow effect
   border: `3px solid ${borderColor}`, // Border color from Google colors
-  width: "140px", // Fixed width
+  width: "270px", // Fixed width
   height: "80px", // Fixed height
   display: "flex",
   alignItems: "center",
@@ -59,7 +59,11 @@ const Finale = () => {
             <ParticipantCard
               borderColor={googleColors[index % googleColors.length]}
             >
-              <Typography variant="body1" color="white">
+              <Typography
+                variant="body1"
+                style={{ fontSize: 22 }}
+                color="white"
+              >
                 {name}
               </Typography>
             </ParticipantCard>

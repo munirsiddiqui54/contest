@@ -16,7 +16,7 @@ const ParticipantCard = styled(Paper)(({ borderColor }) => ({
   borderRadius: "8px",
   boxShadow: "0px 4px 8px rgba(255, 255, 255, 0.2)", // Soft white glow effect
   border: `3px solid ${borderColor}`, // Border color from Google colors
-  width: "140px", // Fixed width
+  width: "250px", // Fixed width
   height: "80px", // Fixed height
   display: "flex",
   alignItems: "center",
@@ -28,8 +28,8 @@ const Beginner = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (roundsData?.rounds?.["Beginner Stage"]) {
-      setParticipants(roundsData.rounds["Beginner Stage"]);
+    if (roundsData?.rounds?.["Qualifier Round"]) {
+      setParticipants(roundsData.rounds["Qualifier Round"]);
     }
   }, []);
 
@@ -57,7 +57,7 @@ const Beginner = () => {
       >
         {/* Title */}
         <Typography variant="h6" color="white">
-          Selected Participants
+          Selected Participants for Qualifier Round
         </Typography>
         {/* Logo */}
         <img src="/icon.svg" alt="Logo" width="200" height="30" />

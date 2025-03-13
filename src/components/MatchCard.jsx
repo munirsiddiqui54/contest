@@ -11,8 +11,8 @@ const MatchCardCompact = ({ number, opponent1, opponent2 }) => {
         backgroundColor: "#222", // Dark background for contrast
         borderLeft: "4px solid white", // Thin green label
         padding: "6px 10px",
-        width: "180px",
-        height: "110px",
+        // width: "200px",
+        height: "150px",
         borderRadius: "8px",
       }}
     >
@@ -31,12 +31,16 @@ const MatchCardCompact = ({ number, opponent1, opponent2 }) => {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
-            width: "100%",
+            justifyContent: "end",
+            width: "290px",
             alignItems: "center",
           }}
         >
-          <span style={{ fontSize: "18px", fontWeight: "bold" }}>❌</span>
+          <span
+            style={{ fontSize: "18px", marginRight: 20, fontWeight: "bold" }}
+          >
+            ❌
+          </span>
 
           <Typography
             variant="caption"
@@ -45,8 +49,8 @@ const MatchCardCompact = ({ number, opponent1, opponent2 }) => {
               color: "#fff",
               padding: "2px 6px",
               borderRadius: "4px",
-              width: "125px",
-              height: "30px",
+              width: "200px",
+              height: "40px",
               textAlign: "center",
               fontSize: "16px",
               overflow: "hidden",
@@ -71,13 +75,13 @@ const MatchCardCompact = ({ number, opponent1, opponent2 }) => {
           {/* Table Number */}
           <Typography
             variant="body2"
-            sx={{ fontWeight: "bold", fontSize: 24, color: "#fff" }}
+            sx={{ fontWeight: "bold", fontSize: 32, color: "#fff" }}
           >
             {number}
           </Typography>
           <Typography
             variant="caption"
-            style={{ marginLeft: 60 }}
+            style={{ marginLeft: 150, fontSize: 22 }}
             sx={{ fontWeight: "bold", my: 0.5, color: "#fff" }}
           >
             VS
@@ -87,7 +91,7 @@ const MatchCardCompact = ({ number, opponent1, opponent2 }) => {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
+            justifyContent: "end",
             width: "100%",
             alignItems: "center",
           }}
@@ -97,6 +101,7 @@ const MatchCardCompact = ({ number, opponent1, opponent2 }) => {
               fontSize: "24px",
               fontWeight: "bold",
               color: "#648BBA",
+              marginRight: 20,
             }}
           >
             O
@@ -109,10 +114,10 @@ const MatchCardCompact = ({ number, opponent1, opponent2 }) => {
               color: "#fff",
               padding: "2px 6px",
               borderRadius: "4px",
-              width: "125px",
-              height: "30px",
+              width: "200px",
+              height: "40px",
               textAlign: "center",
-              fontSize: "16px",
+              fontSize: "18px",
               overflow: "hidden",
               whiteSpace: "nowrap",
               textOverflow: "ellipsis",

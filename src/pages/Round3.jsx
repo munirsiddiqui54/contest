@@ -18,7 +18,7 @@ const SemiFinal = () => {
 
     // Create 6 random pairs (12 participants needed, ensuring even pairing)
     const matchPairs = [];
-    for (let i = 0; i < 12; i += 2) {
+    for (let i = 0; i < 16; i += 2) {
       matchPairs.push({
         number: i / 2 + 1,
         opponent1: shuffled[i],
@@ -57,7 +57,7 @@ const SemiFinal = () => {
 
       <Box display="flex" flexWrap="wrap" gap={2} justifyContent="center">
         {loading
-          ? Array(6)
+          ? Array(8)
               .fill(0)
               .map((_, index) => <LoaderCard key={index} />) // Show LoaderCards
           : pairs.map((pair) => (

@@ -20,7 +20,7 @@ const GrandFinale = () => {
 
     // Create 3 random pairs (6 participants needed, ensuring even pairing)
     const matchPairs = [];
-    for (let i = 0; i < 6; i += 2) {
+    for (let i = 0; i < 8; i += 2) {
       matchPairs.push({
         number: i / 2 + 1,
         opponent1: shuffled[i],
@@ -59,7 +59,7 @@ const GrandFinale = () => {
 
       <Box display="flex" flexWrap="wrap" gap={2} justifyContent="center">
         {loading
-          ? Array(3)
+          ? Array(4)
               .fill(0)
               .map((_, index) => <LoaderCard key={index} />) // Show LoaderCards
           : pairs.map((pair) => (

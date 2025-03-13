@@ -20,7 +20,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/1" element={<Beginner />} />
-          <Route path="/2" element={<Qualifier />} />
+          {/* <Route path="/2" element={<Qualifier />} /> */}
           <Route path="/3" element={<SemiFinal />} />
           <Route path="/4" element={<Finale />} />
           
